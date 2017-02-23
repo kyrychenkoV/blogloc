@@ -22,10 +22,15 @@ Route::get('page', function () {
 Route::get('page5','Index5Controller@index');
 Route::get('article/{id}','IndexController1@show')->name('articleShow'); //создаем алиас на маршрут для того чтобы вставить его в ссылку
 
-Route::post('register','IndexController1@register');
+
 Route::post('register', array('before' => 'csrf', function()
 {
-    return "dfdf";
+
+//    dump('$_POST');
+     print_r($_POST);// не попал файл имдж в суперглобальный масив
+     dump($_POST);
+//    return view('store');
 }));
+Route::post('register','IndexController1@register');
 
 
