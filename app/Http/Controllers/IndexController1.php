@@ -11,7 +11,7 @@ use\App\Lara;
 class IndexController1 extends Controller
 {
     public function register(){
-        exit("fdfgdfg");
+
 
         return view('store');
     }
@@ -21,12 +21,10 @@ class IndexController1 extends Controller
         $this->message='Message add';
     }
 
-   public function index(Request $request){
+   public function index(){
        $message='Message add';
         //$testLara=Lara::select(['id','title'])->get();
         $testLara=Lara::all();
-       $result = $request->session()->all();//получаем данные из сессии
-       dump($result);
         dump($testLara);
 
 	   return view('index')->with(['message'=>$this->message,'testLara'=>$testLara]);

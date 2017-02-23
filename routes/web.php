@@ -25,7 +25,7 @@ Route::get('article/{id}','IndexController1@show')->name('articleShow'); //со�
 Route::post('register','IndexController1@register');
 Route::post('register', array('before' => 'csrf', function()
 {
-    //
+    return "dfdf";
 }));
 
 
