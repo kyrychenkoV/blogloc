@@ -88,3 +88,5 @@ Route::get('/pages/add','Test\CoreResource@add'); // пеерд Route::resource(
 Route::resource('/pages','Test\CoreResource');
 //Route::resource('/pages','Test\CoreResource',['only'=>['index','show']]);//создадутся маршруты только для ['index','show']
 //Route::resource('/pages','Test\CoreResource',['exept'=>['index','show']]);// кроме ['index','show']
+
+Route::controller('/pagess','PagesController');// не пошло
