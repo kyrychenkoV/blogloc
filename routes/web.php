@@ -16,23 +16,21 @@
 });*/
 //Route::get('/','IndexController1@index');
 Route::get('/','IndexController1@index');
-Route::get('page', function () {
-    return 'Hello World';
-});
+
 
 
 //Route::get('page5',['as'=>'home','Index5Controller@index']);
 Route::get('article/{id}','IndexController1@show')->name('articleShow'); //создаем алиас на маршрут для того чтобы вставить его в ссылку
 
-
-Route::post('register', array('before' => 'csrf', function()
-{//    dump('$_POST');
-//     print_r($_POST);// не попал файл имдж в суперглобальный масив
-//     dump($_POST);
-//    return view('store');
-}));
+//
+//Route::post('register', array('before' => 'csrf', function()
+//{//    dump('$_POST');
+////     print_r($_POST);// не попал файл имдж в суперглобальный масив
+////     dump($_POST);
+////    return view('store');
+//}));
 Route::post('register','IndexController1@register');
-
+Route::match(['get','post'],'/contact',['uses'=>'Test\FormController@show','as'=>'contact']);
 
 
 
@@ -82,11 +80,11 @@ Route::post('register','IndexController1@register');
 
 //
 Route::get('/control',['uses'=>'Test\TestController@getControllers','as'=>'controls']);
-Route::get('/control/{id}','Test\TestController@getController')->name('control');
+Route::get('/control/{id}',['uses'=>'Test\TestController@getController','as'=>'control','middleware'=>'middle']);//->name('control');
 // Restful controllers контроллер типа ресурс
 Route::get('/pages/add','Test\CoreResource@add'); // пеерд Route::resource('/pages','Test\CoreResource'); для добавления своего метода в Route::resource и ручками прописываем его;
 Route::resource('/pages','Test\CoreResource');
 //Route::resource('/pages','Test\CoreResource',['only'=>['index','show']]);//создадутся маршруты только для ['index','show']
 //Route::resource('/pages','Test\CoreResource',['exept'=>['index','show']]);// кроме ['index','show']
 
-Route::controller('/pagess','PagesController');// не пошло
+//Route::controller('/pagess','PagesController');// не пошло

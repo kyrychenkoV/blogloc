@@ -2,18 +2,18 @@
 
 @section('content')
 
-    <!--  <?php
-
-    echo Form:: open(array('url' => 'register','files'=>true)) ;
-    echo Form::label('nameCompany', 'NameCompany') . Form::text('nameCompany', Input::old('nameCompany'));
-    echo Form::label('sector', 'Sector') . Form::text('sector', Input::old('sector'));
-    echo Form::label('description', 'Description') . Form::password('description');
-
-    echo Form::submit('Register!');
-    echo Form::submit('Add logo');
-    echo Form::token() . Form::close();
-
-    ?>-->
+<!--    --><?php
+//
+//    echo Form:: open(array('url' => 'register','files'=>true)) ;
+//    echo Form::label('nameCompany', 'NameCompany') . Form::text('nameCompany', Input::old('nameCompany'));
+//    echo Form::label('sector', 'Sector') . Form::text('sector', Input::old('sector'));
+//    echo Form::label('description', 'Description') . Form::password('description');
+//
+//    echo Form::submit('Register!');
+//    echo Form::submit('Add logo');
+//    echo Form::token() . Form::close();
+//
+//    ?>
 
       {{ Form::open(array('url' => 'register','files'=>true)) }}
 
@@ -45,7 +45,8 @@
          </div>
      </div>
      {{ Form::close() }}
-       Ну от роби бренч називай його якось  і починай
+       Ну от роби бренч називай
+    його якось  і починай
        Задача така
        Додати логотип на сторінку компанії
        Для цього:
@@ -69,5 +70,6 @@
   </div>
 
     @endforeach
+<h1>HHHH</h1>
 
 @endsection

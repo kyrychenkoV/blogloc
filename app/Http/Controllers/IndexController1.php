@@ -22,17 +22,17 @@ class IndexController1 extends Controller
 
    public function index(){
        $message='Message add';
-       //$testLara=Lara::select(['id','title'])->get();
+//       $testLara=Lara::select(['id','title'])->get();
         $testLara=Lara::all();
-        dump($testLara);
+//        dump($testLara);
 
-	   return view('index')->with(['message'=>$this->message,'testLara'=>$testLara]);
+	   return view('index')->with(['testLara'=>$testLara]);
    }
 
     public function show($id){
         //1 вариант
         $testLara=Lara::find($id);
-        dump($testLara);
+//        dump($testLara);
 
   //2 konstructor zaprosow
        /* $testLara=Lara::select(['id','title','contetnt','description'])->where ('id',$id)->first(); //where id=$id  first возвращает 1 модкль гет коллекию моделей

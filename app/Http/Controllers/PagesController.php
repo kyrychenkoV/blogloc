@@ -8,7 +8,7 @@ class PagesController extends Controller
 {
 
 public function getIndex(){
-    echo __METHOD__;
+//    echo __METHOD__;
 }
 
 }
