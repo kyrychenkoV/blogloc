@@ -29,10 +29,18 @@ Route::get('article/{id}','IndexController1@show')->name('articleShow'); //со�
 ////     dump($_POST);
 ////    return view('store');
 //}));
-Route::post('register','IndexController1@register');
-Route::match(['get','post'],'/contact',['uses'=>'Test\FormController@show','as'=>'contact']);
+//Route::post('register','IndexController1@register');
+//Route::match(['get','post'],'/contact',['uses'=>'Test\FormController@show','as'=>'contact']);
 
 
+Route::get('/contact',(['uses'=>'Test\FormController@index','as'=>'contacts']));
+
+Route::post('user/contact',(['uses'=>'Test\FormController@show','as'=>'contact']));
+
+//Route::get('/register',function(){
+//    return view('register');
+//});
+//Route::post('/user/register',array('uses'=>'UserRegistration@postRegister'));
 
 //Route::get ('/test/{id}',function ($id){
 //    echo '<pre>';
