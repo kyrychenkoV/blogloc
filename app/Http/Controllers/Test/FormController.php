@@ -96,15 +96,15 @@ class FormController extends Controller
 
             echo 'File Real Path: '.$file->getRealPath();
             echo '<br>';
-
+////
 //            $comp=new Company();
-//            $comp->createModel($request);
+//            $comp->createModel($request,$fileName);
 
             $companies=Company::all();
             dump($companies);
-
+            $a='uploads/Penguins.jpg';
         }
-        return view ('showCompany',['title'=>'Contacts','companies' =>$companies,'name'=>$name,'description'=>$description,'requests'=>$requests,'url'=>$url]);
+        return view ('showCompany',['title'=>'Contacts','companies' =>$companies,'name'=>$name,'description'=>$description,'requests'=>$requests,'destinationPath'=>$destinationPath,'a'=>$a]);
 //        return view ('form');
    }
 }

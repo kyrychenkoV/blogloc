@@ -9,13 +9,24 @@
 {{--img{{ $requests['image']}}--}}
 {{--<h1>{{ $url}}</h1>--}}
 
+{{--$company->img === вытягует uploads/Penguins.jpg--}}
+{{--<img src="{{ asset('uploads/Penguins.jpg') }}"/>--}}
 
-{{--<img src="{{asset('images/one.jpg')}}"/>--}}
+
+<img src="@{{ asset('$company->img') }}">
+<img src="{{ asset( {{$company->img}} ) }}"/>
+<img src="{{ asset('$company->img)'}}"/>
+<img src="{{ asset('{{$company->img}})'}}"/>
+
 
 @foreach ($companies as $company)
     <p> {{ $company->name }}</p>
     <p> {{ $company->description }}</p>
-    <p> {{ $company->img }}</p>
+{{--    <p> {{ $company->img }}</p>--}}
+{{--    {!! link_to_route('login_path') !!}--}}
+{{--    <img src="{{asset('{{ $company->img }}')}}"/>--}}
+{{--    <img src="{{ asset(' {{ $destinationPath }}/{{ $company->img }} ') }}"/>--}}
 
+{{--    <p>  <a href="{{ $company->img }}"></a></p>--}}
 
 @endforeach

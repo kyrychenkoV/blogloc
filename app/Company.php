@@ -15,12 +15,13 @@ class Company extends Model
 
         return view('databaseShow', ['companies' => $companies]);
     }
-    public function createModel($request)
+    public function createModel($request,$pictureName)
     {
+        $patch='uploads/';
         $company=new Company;
         $company->name=$request->input('title');
         $company->description=$request->input('description');
-        $company->img="c:";
+        $company->img=$patch.$pictureName;
         $company->save();
           
     }
