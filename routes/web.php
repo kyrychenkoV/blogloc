@@ -17,7 +17,9 @@
 //Route::get('/','IndexController1@index');
 Route::get('/','IndexController1@index');
 
-
+Route::get('/array', function () {
+    return view('array');
+});
 
 //Route::get('page5',['as'=>'home','Index5Controller@index']);
 Route::get('article/{id}','IndexController1@show')->name('articleShow'); //создаем алиас на маршрут для того чтобы вставить его в ссылку

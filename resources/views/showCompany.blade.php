@@ -13,15 +13,16 @@
 {{--<img src="{{ asset('uploads/Penguins.jpg') }}"/>--}}
 
 
-<img src="@{{ asset('$company->img') }}">
-<img src="{{ asset( {{$company->img}} ) }}"/>
-<img src="{{ asset('$company->img)'}}"/>
-<img src="{{ asset('{{$company->img}})'}}"/>
+
+{{--<img src="{{ asset( {{$company->img}} ) }}"/>--}}
+{{--<img src="{{ asset('$company->img)'}}"/>--}}
+{{--<img src="{{ asset('{{$company->img}})'}}"/>--}}
 
 
 @foreach ($companies as $company)
     <p> {{ $company->name }}</p>
     <p> {{ $company->description }}</p>
+    <img src="{{ asset($company->img) }}">
 {{--    <p> {{ $company->img }}</p>--}}
 {{--    {!! link_to_route('login_path') !!}--}}
 {{--    <img src="{{asset('{{ $company->img }}')}}"/>--}}
