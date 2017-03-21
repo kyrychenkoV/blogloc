@@ -27,7 +27,7 @@ class NewsController extends Controller
     {
         $news = new News;
         if ($news->validateForm($request->all())) {
-            $news->savePicture($request);
+            $news->saveImage($request);
             $input = $request->all();
             $news->fill($input);
             $news->save();
@@ -53,18 +53,17 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         /**
-         * @var News $newsOne 
+         * @var News $newsOne
          */
         $newsOne = News::find($id);
         if ($newsOne->validateForm($request->all())) {
-            $newsOne->savePicture($request);
+            $newsOne->saveImage($request);
             $input = $request->all();
             $newsOne->fill($input)->save();
             Session::flash('flash_message', 'news successfully added!');
             return redirect()->route('news.index');
         } else {
-
-            return redirect()->route('news.edit', ['newsOne' => $newsOne])->withInput()->withErrors($newsOne->getErrorsMessages);
+            return redirect()->route('news.edit', ['newsOne' => $newsOne])->withInput()->withErrors($newsOne->getErrorsMessages());
 
         }
     }

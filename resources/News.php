@@ -2,12 +2,15 @@
 
 namespace App\Models;
 
+use App\Helpers\Contracts\Validate;
+use App\Helpers\Contracts\Image;
+use App\Helpers\Contracts\News as NewsInterface;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
-class News extends Model
+class News extends Model implements Validate, Image, NewsInterface
 {
     const NOT_PICTURE = 'Not picture';
     private $path = 'image/uploads/news/';
@@ -25,7 +28,7 @@ class News extends Model
         'img',
     ];
 
-    public function savePicture(Request $request)
+    public function saveImage(Request $request)
     {
         if (!$this->img && $request->hasFile('image')) {
             $pictureName = $this->fileSave($request);
@@ -55,7 +58,7 @@ class News extends Model
         $this->delete();
     }
 
-    private function fileSave($request)
+    public function fileSave($request)
     {
         $file = $request->file('image');
         $pictureName = $file->getClientOriginalName();
@@ -64,7 +67,6 @@ class News extends Model
         $file->move($this->path, $pictureName);
         return $pictureName;
     }
-
 
     public function validateForm($news)
     {
@@ -81,17 +83,13 @@ class News extends Model
         return $this->path;
     }
 
-    public function getErrorsMessages()
+    public function getImage()
     {
-        return $this->errorsMessagess;
-    }
-
-    private function getImage()
-    {
-//        return  ($new->img?$new->getPatch().$new->img:self::DUMMY);
         return $this->getPath() . $this->img;
     }
-//    public function scopeGetNews($query){
-//        return $query->where('votes', '>', 100);
-//    }
+
+    public function getErrorsMessages()
+    {
+        return $this->errorsMessages;
+    }
 }
