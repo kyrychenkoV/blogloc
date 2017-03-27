@@ -1,0 +1,2 @@
+ErrorException in News.php line 12:
+Declaration of App\Models\News::save() should be compatible with Illuminate\Database\Eloquent\Model::save(array $options = Array)

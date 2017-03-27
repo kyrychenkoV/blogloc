@@ -1,18 +1,17 @@
 <?php
 
 namespace App\Models;
-
-use App\Helpers\Contracts\Validate;
-use App\Helpers\Contracts\Image;
-use App\Helpers\Contracts\News as NewsInterface;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use App\Helpers\Contracts\News as NewsInterface;
+use App\Helpers\Contracts\Image;
 
-class News extends Model implements Validate, Image, NewsInterface
+class News extends Model implements NewsInterface,Image
 {
     const NOT_PICTURE = 'Not picture';
+    const NEWS_ON_MAIN_PAGE=10;
     private $path = 'image/uploads/news/';
     private $errorsMessages;
 
@@ -26,8 +25,9 @@ class News extends Model implements Validate, Image, NewsInterface
         'name',
         'description',
         'img',
+        'created_at',
+        'updated_at',
     ];
-
     public function saveImage(Request $request)
     {
         if (!$this->img && $request->hasFile('image')) {
@@ -44,7 +44,7 @@ class News extends Model implements Validate, Image, NewsInterface
         $this->img = $pictureName;
     }
 
-    public function deletePicture()
+    private function deletePicture()
     {
         $exists = Storage::disk('local')->has($this->getImage());
         if ($exists)
@@ -83,13 +83,26 @@ class News extends Model implements Validate, Image, NewsInterface
         return $this->path;
     }
 
-    public function getImage()
-    {
-        return $this->getPath() . $this->img;
-    }
-
     public function getErrorsMessages()
     {
         return $this->errorsMessages;
     }
+
+    public function getImage()
+    {
+        return $this->getPath() . $this->img;
+    }
+    public function getNewsForMainPage()
+    {
+        $news = $this->latest('id')->limit(self::NEWS_ON_MAIN_PAGE)->get();
+        return $news;
+    }
+    public function save(Request $request){
+        dump($request);
+        echo "sdsdfsd";
+    }
+    public function touchOwners(Request $request){
+
+    }
+
 }

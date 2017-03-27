@@ -1,5 +1,5 @@
 <?php
-
+include "phpqrcode/qrlib.php";
 //class Aa
 //{
 //    function foo()
@@ -341,45 +341,71 @@
 //    $bar->printItem('baz'); // Выведет: 'Bar: baz'
 //    $bar->printPHP();       //
 
-    class foo
-    {
-        public function something()
-        {
-            echo __CLASS__; // foo
-            var_dump($this);
-        }
-    }
+//    class foo
+//    {
+//        public function something()
+//        {
+//            echo __CLASS__; // foo
+//            var_dump($this);
+//        }
+//    }
+//
+//    class foo_bar extends foo
+//    {
+//        public function something()
+//        {
+//            echo __CLASS__; // foo_bar
+//            var_dump($this);
+//        }
+//    }
+//
+//    class foo_bar_baz extends foo_bar
+//    {
+//        public function something()
+//        {
+//            echo __CLASS__; // foo_bar_baz
+//            var_dump($this);
+//        }
+//
+//        public function call()
+//        {
+//            echo self::something(); // self
+//            echo parent::something(); // parent
+//            echo foo::something(); // grandparent
+//        }
+//    }
+//
+//    error_reporting(-1);
+//
+//    $obj = new foo_bar_baz();
+//    $obj->call();
+//class a {
+////    public $data='dfdfdfsdf';
+//    public function one(array $options = []){
+//        echo $data;
+//    }
+//}
+//class b extends a {
+////    public $arr=[1,2,4];
+//      public function one($arr){
+//       print_r ($arr);
+//          parent::one('dsfsdf');
+//    }
+//}
+//$a=new a();
+//$b=new b();
+//$b->one([1,8]);
 
-    class foo_bar extends foo
-    {
-        public function something()
-        {
-            echo __CLASS__; // foo_bar
-            var_dump($this);
-        }
-    }
-
-    class foo_bar_baz extends foo_bar
-    {
-        public function something()
-        {
-            echo __CLASS__; // foo_bar_baz
-            var_dump($this);
-        }
-
-        public function call()
-        {
-            echo self::something(); // self
-            echo parent::something(); // parent
-            echo foo::something(); // grandparent
-        }
-    }
-
-    error_reporting(-1);
-
-    $obj = new foo_bar_baz();
-    $obj->call();
-
-
+//опционный аррай
+//
+//function makecoffee($types = array("капуччино"), $coffeeMaker = NULL)
+//{
+//    $device = is_null($coffeeMaker) ? "вручную" : $coffeeMaker;
+//    return "Готовлю чашку ".join(", ", $types)." $device.\n";
+//}
+//echo makecoffee();
+//echo makecoffee(array("капуччино", "лавацца"), "в чайнике");
+QRcode::png("http://blog.local", "test1.png", "L", 4, 4);
+//QRcode::png("https://mail.google.com/mail/u/0/#inbox/15b0f220df83b8fc");
 
 ?>
