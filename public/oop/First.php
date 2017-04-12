@@ -407,5 +407,13 @@ include "phpqrcode/qrlib.php";
 //echo makecoffee(array("капуччино", "лавацца"), "в чайнике");
 QRcode::png("http://blog.local", "test1.png", "L", 4, 4);
 //QRcode::png("https://mail.google.com/mail/u/0/#inbox/15b0f220df83b8fc");
+echo 'laravel';
+$i=0;
+for($i=0;$i<10;$i++){
+   echo 'laravel';
 
+   if($i==5){
+       echo 'laravelssssss'   ;
+   }
+}
 ?>
