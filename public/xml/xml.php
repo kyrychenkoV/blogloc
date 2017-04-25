@@ -9,11 +9,21 @@ if ($xmls === false) die('Error parse RSS: ' . $rss);
 $arr = [];
 
 foreach ($xmls->channel->item as $it) {
-    $dataArray['title'][] = $it->title;
-    $dataArray['description'][] = (string)$it->description;
-    $dataArray['url'][] = $it->enclosure['url'];
+    $dataArray[] =
+        ['title'=>$it->title,
+            'description' => (string)$it->description,
+            'url'=> $it->enclosure['url'],
+        ];
 }
-
+var_dump($dataArray);
+$url = $dataArray[1]['url'];
+// Загружаем содержимое удалённого изображения
+$content = file_get_contents($url);
+// Сохраняем файл на локальной машине
+$fd = fopen("posentryprice_EUR_USD.png","w");
+fwrite($fd, $content);
+fclose($fd);
+$bool=copy($dataArray[1]['url'],"image5.jpg");
 for ($i = 0; $i < 10; $i++) {
     echo $dataArray['title'][$i] . "<br><br>";
     echo "<img src=\"" . $dataArray['url'][$i] . "\"width=\"255\" height=\"255\">" . "<br>";
