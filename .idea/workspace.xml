@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0095f416-2e90-48b5-8ee4-69379aad5426" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/xml/image5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/xml/posentryprice_EUR_USD.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/oop/UpdateDatabaseReservation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/oop/orderGet.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blog.loc.iws" />
@@ -67,8 +71,8 @@
       <file leaf-file-name="News.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/src/News.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+            <state relative-caret-position="275">
+              <caret line="104" column="37" lean-forward="true" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -566,7 +570,7 @@
       <workItem from="1493094963303" duration="777000" />
       <workItem from="1493106509942" duration="437000" />
       <workItem from="1493126881595" duration="2841000" />
-      <workItem from="1493207004086" duration="51000" />
+      <workItem from="1493207004086" duration="273000" />
     </task>
     <task id="LOCAL-00001" summary="dfsdfsd">
       <created>1487839286077</created>
@@ -680,11 +684,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493126987357</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add">
+      <created>1493207108626</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1493207108626</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242284000" />
+    <option name="totallyTimeSpent" value="242506000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1121,8 +1132,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/src/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="115" column="22" lean-forward="true" selection-start-line="115" selection-start-column="22" selection-end-line="115" selection-end-column="22" />
+        <state relative-caret-position="275">
+          <caret line="104" column="37" lean-forward="true" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
           <folding />
         </state>
       </provider>
