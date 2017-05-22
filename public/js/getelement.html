@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="content">Выделим этот элемент</div>
+
+    <div id="one">Выделим этот элемент
+        <div>1</div>
+        <div>2</div>
+    </div>
+<table id="age-table">
+    <tr>
+        <td>Ваш возраст:</td>
+
+        <td>
+            <label>
+                <input type="radio" name="age" value="young" checked> младше 18
+            </label>
+            <label>
+                <input type="radio" name="age" value="mature"> от 18 до 50
+            </label>
+            <label>
+                <input type="radio" name="age" value="senior"> старше 60
+            </label>
+        </td>
+    </tr>
+
+    <form name="search">
+        <label>Поиск по сайту:
+            <input type="text" name="search">
+        </label>
+        <input type="submit" value="Искать!">
+    </form>
+    <hr>
+    <form name="search-person">
+        Поиск по посетителям:
+        <table id="age-table">
+            <tbody><tr>
+                <td>Возраст:</td>
+                <td id="age-list">
+                    <label>
+                        <input type="radio" name="age" value="young">до 18</label>
+                    <label>
+                        <input type="radio" name="age" value="mature">18-50</label>
+                    <label>
+                        <input type="radio" name="age" value="senior">более 50</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Дополнительно:</td>
+                <td>
+                    <input type="text" name="info[0]">
+                    <input type="text" name="info[1]">
+                    <input type="text" name="info[2]">
+                </td>
+            </tr>
+
+            </tbody></table>
+
+        <input type="submit" value="Искать!">
+    </form>
+</table>
+</body>
+<script>
+//   var dis=document.getElementById('content');
+//   dis.style.backgroundColor='red'
+//   content.style.backgroundColor='';
+//
+//    var element=document.getElementById('one');
+//    console.log(element);
+//    var ele=document.getElementsByTagName('div');
+//    console.log(ele)
+//    ele[1].style.backgroundColor='red'
+//    for (var i=0;i<ele.length;i++){
+//     console.log(ele[i]);}
+//
+//   var tableElem = document.getElementById('age-table');
+//   var elements = tableElem.getElementsByTagName('input');
+//
+//   for (i = 0; i < elements.length; i++) {
+//       var input = elements[i];
+//       if(i===1){
+//           input.checked=true;
+//       }
+//       console.log( input.value + ': ' + input.checked );
+//   }
+//   var all=document.getElementsByTagName('*');
+//   console.log(all)
+//   console.log(all[6])
+//
+//   var el = tableElem.getElementsByTagName('label');
+//   console.log(el[0])
+//    var table=document.getElementById('age-table');
+//    var lab=table.getElementsByTagName('label');
+//    console.log(table)
+//    console.log(lab)
+//    console.log(document.getElementById('age-table').getElementsByTagName('td')[0]);
+//    var lala=document.getElementsByTagName('form')[1];
+//    console.log(lala)
+//    console.log(document.getElementsByName('search'))
+//    console.log(document.querySelector('form[name="search"]'))
+//    console.log(document.querySelector('form[name="search"] input'))
+//    console.dir(document.querySelector('form[name="search"]'))
+
+var a=document.body;
+console.log(a);
+console.dir(a);
+
+
+
+</script>
+</html>

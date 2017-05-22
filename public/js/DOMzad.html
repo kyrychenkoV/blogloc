@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+    <html lang="en">
+<head><meta charset="UTF-8"><title>Title</title></head>
+<body><div>Пользователи:</div>
+            <ul>
+                 <li>Маша</li>
+                 <li>Вовочка</li>
+            </ul>
+
+<!-- комментарий -->
+   <!--Напишите код, который получит элемент HEAD.-->
+    <!--Напишите код, который получит UL.-->
+    <!--Напишите код, который получит второй LI. Будет ли ваш код работать в IE8-, если комментарий переместить между элементами LI?*/-->
+<script>
+//    var head=document.documentElement;
+//    console.log(head.childNodes);//head, text, body
+//    console.log(head)//all document
+//    console.log(head.firstChild)//head
+//    console.log(head.lastChild)//body
+//    console.log(head.lastChild-1)//nan
+//    console.log(head.firstChild.innerHTML)//texst <meta charset="UTF-8">    <title>Title</title>
+//    console.log(head.childNodes[1]);//#text
+//    console.log(head.childNodes[1].innerHTML );//undefined
+
+    var head=document.body;
+//    console.log(head.childNodes);//text, div, text, ul, text, comment, text, comment, text, comment, text, comment, text, script]
+//    console.log(head)//all document
+//    console.log(head.firstChild)//head
+//    console.log(head.lastChild)//body
+//    console.log(head.lastChild-1)//nan
+//    console.log(head.firstChild.innerHTML)//texst <meta charset="UTF-8">    <title>Title</title>
+//    console.log(head.childNodes[1]);//#text
+//    console.log(head.childNodes[1].innerHTML );//und
+////    window.open('http://ya.ru');
+//    document.body.style.background = 'red';
+//    document.body.style.background = '';
+//    document.body.id = 'df';
+//    console.log(navigator)
+//    console.log(location.href)
+
+
+    console.log(head.childNodes);
+    console.log(head.firstChild);
+    console.log(head.childNodes[head.childNodes.length - 1]);
+
+    console.log(head.childNodes[2]);
+    console.log(head.children[1]);
+    console.log(head.children[1].children[1].innerHTML);
+    console.log(head.children[1].children[0] );
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

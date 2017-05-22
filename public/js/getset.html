@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript">
+//    var user = {
+//        name: 'Василий',
+//        sayHi: function() {
+//            console.log( 'Привет!' );
+//        }
+//    };
+//    user.sayHi();
+//    var user1 = {
+//        name: 'Василий',
+//        sayHi: function() {
+//            console.log( this.name );
+//        }
+//    };
+//    user1.sayHi();
+//    var user2 = {
+//        name: 'Василий',
+//        sayHi: function() {
+//            return this;
+//        }
+//    };
+//    var a=user2.sayHi();
+//    console.log(a);
+//
+//    function ar(){
+//         a=5;
+//        return function(){
+//
+//       return  this;
+//        }
+//    }
+//    ar();
+//    var s=  ar();
+//    console.log(s());
+//    s();
+        //1
+//    var obj={
+//        arr:[0,1],
+//        func:function() {
+//
+//            if(Array.isArray(this))
+//            console.log(this);
+//              }
+//    }
+//    obj.arr[2]=5;
+//    obj.arr[3]=obj.func;
+//   obj.arr[3]()
+//    obj.func()
+    //2
+//var obj = {
+//    go: function() {
+//        alert(this)
+//    }
+//};
+//(obj.go)()
+
+   //3
+//var user = {
+//    firstName: "Василий",
+//
+//    export: function(){
+//        return this.firstName
+//    }
+//};
+//  5
+//alert( user.export() );
+//var calculator = {
+//    read:function(){
+//        this.a = +prompt('a?', 0);
+//        this.b = +prompt('b?', 0);
+//    },
+//    sum:function(){
+//       return this.a+this.b;
+//    },
+//    mul:function(){
+//        return this.a*this.b;
+//    }
+//
+//}
+//
+//calculator.read();
+//console.log(calculator)
+//console.log (calculator.sum());
+//alert( calculator.mul() );
+    //6
+//var ladder = {
+//    step: 0,
+//    up: function() { // вверх по лестнице
+//       this.step++;
+//        return this;
+//    },
+//    down: function() { // вниз по лестнице
+//        this.step--;
+//        return this;
+//    },
+//    showStep: function() { // вывести текущую ступеньку
+//        alert( this.step );
+//    }
+//};
+console.log(ladder.up().up().up().down());
+ladder.showStep();
+</script>

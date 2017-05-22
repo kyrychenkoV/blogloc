@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<p><a href="lorem.html"><img src="images/girl.jpg"
+                             width="189" height="255" alt="lorem"></a>
+    Lorem ipsum dolor sit amet...</p>
+<div class="img"></div>
+</body>
+<script>
+    function changeClass() {
+        $(this).prev().toggleClass('active')
+    }
+//    for(var i=0;i<5;i++)
+//        $('.img').hide();
+        $('.img').append('<img src="images/girl.jpg" width="189" height="255" alt="lorem"> <br>');
+        $('.img').slideDown('slow', changeClass);
+        $('.img').slideUp('slow', changeClass);
+        $('.img').slideToggle('slow', changeClass);
+    ;
+    $('img').animate({
+        'opacity':'hide'
+    })
+    $('img').animate({
+        'opacity':'show'
+    })
+
+    $(' img').animate({
+        'opacity':0.5,
+        'height':'50px',
+        'width':'250px',
+        easing:"swing" // или «swing»
+    })
+</script>
+</html>

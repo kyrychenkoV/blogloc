@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Начало</div>
+
+    <ul>
+        <li>Информация</li>
+    </ul>
+
+        <div>Конец</div>
+
+    <div>;df'gdfl'</div>
+<table>
+    <tr>
+        <td>один</td> <td>два</td>
+    </tr>
+    <tr>
+        <td>три</td>  <td>четыре</td>
+    </tr>
+</table>
+</body>
+
+  </html>
+<script>
+    /*for (var i = 0; i < document.body.childNodes.length; i++) {
+       // alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+    }*/
+//    var elems = document.documentElement
+//    console.log( elems);
+//    elems = Array.prototype.slice.call(elems); // теперь elems - массив
+//    console.log();
+//    elems.forEach(function(elem) {
+////        alert( elem.tagName ); // HEAD, текст, BODY
+//    });
+    var elems = document.documentElement.childNodes;
+
+    [].forEach.call(elems, function(elem) {
+        console.log( elem ); // HEAD, текст, BODY
+    });
+    console.log('f');
+    for (var i = 0; i < document.body.children.length; i++) {
+        console.log( document.body.children[i] ); // DIV, UL, DIV, SCRIPT
+    }
+    console.log('dfgdfg');
+
+    var table = document.body.children[4];
+
+    console.log(table)
+    console.log( table.rows[0].cells[0] )
+    console.log( table.rows[0].cells[0].innerHTML )
+    table.rows[0].cells[0].innerHTML='lalala'
+
+</script>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //1
+//function Animal(name){
+//    this.name=name;
+//    this.canWalk=true;
+//}
+//var animal=new Animal("yochik");
+        //2
+//function Animal(){
+//    this.name='yochik';
+//    this.canWalk=true;
+////    return "babayaga"
+//    return {name:"notYechik"}
+//}
+////console.log(new Animal().name);
+    // 3
+
+//    function User(names){
+//        this.age=25;
+//        this.name=function () {
+//           return console.log("my name is "+ this.names)
+//        }
+//    }
+//    var vasya=new User('Vasya');
+//    vasya.name();
+//
+//    function Use1(names){
+//
+//        return function m() {
+//            return ("my name is "+names)//
+//             }
+//    }
+//    var a=Use1('lalala');
+//    console.log(a());
+//    console.log("dfksfkl")
+
+    //3
+//    function User(name,lastname){
+//        function getFullName(){
+//            return name+lastname
+//        }
+//        this.dannie=function () {
+//            return getFullName();
+//
+//        }
+//
+//    }
+//    var oneperson=new User('Vasua', "petroc")
+//    console.log(oneperson.dannie())
+
+//    var obj={};
+//    function A() {
+//        return obj
+//    }
+//    function B() {
+//
+//        return obj
+//    }
+//
+//    var a = new A;
+//    var b = new B;
+//
+//    alert( a == b );
+    //2
+//    function Calculator(){
+//        this.read=function (){
+//            this.a=+prompt('a',0);
+//            this.b=+prompt('b',0);
+//        }
+//        this.sum=function(){
+//            return this.a+this.b
+//        }
+//        this.mul=function(){
+//            return this.a*this.b
+//        }
+//    }
+//    var calculator = new Calculator();
+//    calculator.read();
+//
+//    alert( "Сумма=" + calculator.sum() );
+//    alert( "Произведение=" + calculator.mul() );
+    //3
+//    function Accumulator(startingValue){
+//        this.value=startingValue;
+//        this.read=function(){
+//            this.a=+prompt('a',0);
+//            this.value+=this.a;
+//        }
+//    }
+//    var accumulator = new Accumulator(1); // начальное значение 1
+//    accumulator.read(); // прибавит ввод prompt к текущему значению
+//    accumulator.read(); // прибавит ввод prompt к текущему значению
+//    alert( accumulator.value );
+    //4
+//    function Calculator(){
+//
+//        this.calculate= function(oper){
+//            var array=oper.split(' ')
+//            console.log(array[0])
+//        }
+//    }
+//    var calc = new Calculator;
+//
+//    alert( calc.calculate("3 + 5") );
+//    var user = {};
+//    user.name = "Вася";
+//    Object.defineProperty(user, "name", { value: "Вася", configurable: true, writable: true, enumerable: true });
+//
+//    var user1= {};
+//    Object.defineProperty(user1, "name", {
+//        value: "Вася",
+//        writable:false, // запретить присвоение "user.name="
+//        configurable: false // запретить удаление "delete user.name"
+//    });
+//
+//    user1.name = "Петя";
+//    delete  user1.name
+//    console.log(user1)
+
+//    var user2 = {
+//        firstName: "Вася",
+//        surname: "Петров"
+//    }
+//
+//    Object.defineProperty(user2, "fullName", {
+//        get: function() {
+//            return this.firstName + ' ' + this.surname;
+//        },
+//        set:function(a ){
+//            var split=a.split(' ')
+//            this.firstName=split[0];
+//            this. surname= split[1];
+//        }
+//    });
+//    user2.fullName='dfdf dfsdfsdf';
+//    alert(user2.fullName); // Вася Петров
+//    var user = {
+//        a:1
+//    }
+//
+//    Object.defineProperties(user, {
+//        firstName: {
+//            value: "Петя"
+//        },
+//
+//        surname: {
+//            value: "Иванов"
+//        },
+//
+//        fullName: {
+//            get: function() {
+//                return this.firstName + ' ' + this.surname;
+//            }
+//        }
+//    });
+//
+//    console.log( user ); // Петя Иванов
+//   console.log( Object.keys(user))
+//    console.log( Object.getOwnPropertyNames(user))
+//    Object.seal(user)
+//
+//    function User(fullName) {
+//        this.fullName = fullName;
+//
+//        Object.defineProperties(this, {
+//
+//            firstName: {
+//
+//                get: function() {
+//                    return this.fullName.split(' ')[0];
+//                },
+//
+//                set: function(newFirstName) {
+//                    this.fullName = newFirstName + ' ' + this.lastName;
+//                }
+//
+//            },
+//
+//            lastName: {
+//
+//                get: function() {
+//                    return this.fullName.split(' ')[1];
+//                },
+//
+//                set: function(newLastName) {
+//                    this.fullName = this.firstName + ' ' + newLastName;
+//                }
+//
+//            }
+//
+//        });
+//    }
+//
+//    var vasya = new User("Василий Попкин");
+//
+//    vasya.firstName='Петя';
+//    vasya.lastName='Сидоров';
+//    console.log(vasya.firstName);
+//    console.log(vasya.lastname)
+//    alert(vasya.fullName)
+
+
+
+//
+//    function Article() {
+//        Article.count++;
+//    }
+//
+//    Article.count = 10; // статическое свойство-переменная
+//    Article.DEFAULT_FORMAT = "html"
+//    Article.DEFAULT_FORMAT = "htmlf";
+//    Article()
+//    console.log(Article.DEFAULT_FORMAT)
+//    console.log(Article.count)
+    function Article() {
+        Article.count++;
+
+    }
+    Article.count = 0;
+
+    Article.showCount = function() {
+        alert( this.count ); // (1)
+    }
+
+    // использование
+    var a= new Article();
+    var b=new Article();
+    Article.showCount();
+    console.log(a,b)
+
+
+</script>
+</body>
+</html>

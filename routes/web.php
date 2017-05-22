@@ -98,3 +98,27 @@ Route::resource('/pages','Test\CoreResource');
 //Route::resource('/pages','Test\CoreResource',['exept'=>['index','show']]);// кроме ['index','show']
 
 //Route::controller('/pagess','PagesController');// не пошло
+Route::get('/ajax',function() {
+    return "" ;
+});
+Route::get('/ajax1',function() {
+    return view('message') ;
+});
+Route::post('/getmsg','AjaxController@index') ;
+
+
+Route::get( '/settings/new', array(
+    'as' => 'settings.new',
+    'uses' => 'SettingsController@add'
+) );
+
+//Settings: create a new setting
+Route::post( '/settings', array(
+    'as' => 'settings.create',
+    'uses' => 'SettingsController@create'
+) );
+
+Route::get('account/login', function() {
+    return View::make('login');
+});
+Route::post('account/login', 'AccountController@login');

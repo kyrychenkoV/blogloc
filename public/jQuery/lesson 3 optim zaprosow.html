@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="content" class="wrapper box">
+    <hgroup>
+        <h1>Page Title</h1>
+        <h2>Page Description</h2>
+    </hgroup>
+    <article id="stick">
+        <h2>Article Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipisci</p>
+    </article>
+    <article>
+        <h2>Article Title</h2>
+        <p>Morbi malesuada, ante at feugiat tincidunt, enim massa gravida
+            metus, commodo lacinia massa diam vel eros.</p>
+    </article>
+    <article id="stick1">
+        <h2>111Article1 Title</h2>
+        <p>111Lorem ipsum dolor sit amet, consectetuer adipisci</p>
+    </article>
+    <div class="but">
+        <p style="visibility: hidden;"><button>Кнопка с текстом</button>
+    </div>
+    <footer>
+        <p>&copy;copyright 2012</p>
+    </footer>
+
+</div>
+
+<script>
+    (function($, undefined){   //// anonymous function - best practices
+        $(function(){
+//            $("article#stick p").css("color", "#966");
+//            $("div article#stick h2").css("color", "#892");
+//            $("h1 + h2").css("color", "#916");
+//            $("#stick~article").css("color", "#819");
+            $("#stick").prev().css("color", "#040");
+
+            var button = $('.but').attr('visibility',"hidden");
+
+            $('.but')removeAttr
+        });
+    })(jQuery);
+
+    //1. Сохранять результаты поиска результаты поиска не кэшируются, каждый раз, запрашивая элементы по   селектору, вы инициируете поиск элементов снова и снова
+    console.log ($("#content"))// выбираем элемент с id=content
+    var $paragraf = $("article#stick p");
+    $paragraf.addClass("lalala")
+    $paragraf.click(function(){});
+    //2. Или использовать цепочки вызовов (что по сути аналогично первому правилу):
+    $("article#stick p").addClass("fafafa").click(function(){});
+    //3 Использовать context (это такой второй параметр при выборе по селектору):
+    $("")
+</script>
+</body>
+</html>

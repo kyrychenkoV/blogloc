@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="content" class="wrapper box">
+    <hgroup>
+        <h1>Page Title</h1>
+        <h2>Page Description</h2>
+    </hgroup>
+    <article id="stick">
+        <h2>Article Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipisci</p>
+    </article>
+    <article>
+        <h2>Article Title</h2>
+        <p>Morbi malesuada, ante at feugiat tincidunt, enim massa gravida
+            metus, commodo lacinia massa diam vel eros.</p>
+    </article>
+    <article id="stick1">
+        <h2>111Article1 Title</h2>
+        <p>111Lorem ipsum dolor sit amet, consectetuer adipisci</p>
+    </article>
+    <footer>
+        <p>&copy;copyright 2012</p>
+    </footer>
+</div>
+
+<script>
+    (function($, undefined){   //// anonymous function - best practices
+        $(function(){
+//            $("article#stick p").css("color", "#966");
+//            $("div article#stick h2").css("color", "#892");
+//            $("h1 + h2").css("color", "#916");
+//            $("#stick~article").css("color", "#819");
+            $("#stick").prev().css("color", "#040");
+
+
+        });
+    })(jQuery);
+    console.log ($("#content"))// выбираем элемент с id=content
+
+    console.log ($("div#content"))// выбираем div с id=content (хотя id и так однозначен)
+    console.log ($(".wrapper"))// выбираем элементы с class=wrapper
+    console.log ($("div.wrapper"))// выбираем div'ы с class=wrapper
+    console.log ($(".wrapper.box"))// выбираем элементы с class=wrapper и box
+    console.log ($("h2"))// выбираем все теги h2
+    console.log ($("h1, h2")) // выбираем все теги h1 и h2
+    console.log ($("article#stick p"))
+    console.log ($("div article#stick h2")) // выбираем все теги h2 внутри тега article внутри тега div, в доме который построил Джек
+    console.log ($("div").find("article").find("#stick").find("h2")) //не сработало у меня
+
+   // У нас есть соседи:
+    console.log ($("h1 + h2")) // выбор всех h2 элементов, перед которыми идут h1    // элементы (у нас только один такой)
+    console.log ($("#stick1 ~ article")) // выбор всех article элементов после элемента    // c id=stick
+    console.log ($("#stick").prev()) // выбор предыдущего элемента от найденного
+    console.log ($("#stick").next()) // выбор следующего элемента от найденного
+
+
+</script>
+</body>
+</html>

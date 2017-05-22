@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="content" class="wrapper box">
+    <hgroup>
+        <h1>Page Title</h1>
+        <h2>Page Description</h2>
+    </hgroup>
+    <article id="stick">
+        <h2>Article Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipisci</p>
+    </article>
+    <article>
+        <h2>Article Title</h2>
+        <p>Morbi malesuada, ante at feugiat tincidunt, enim massa gravida
+            metus, commodo lacinia massa diam vel eros.</p>
+    </article>
+    <article id="stick1">
+        <h2>111Article1 Title</h2>
+        <p>111Lorem ipsum dolor sit amet, consectetuer adipisci</p>
+    </article>
+    <div class="but">
+        <a href="https://www.google.com.ua/webhp?hl=ru">GOOGLE Блокирование</a>
+        <p><button>Кнопка с текстом</button>
+    </div>
+    <input value="Hide div"  type="button" id="button">
+    <a href="https://www.google.com.ua/webhp?hl=ru" class="ks">GOOGLE</a>
+
+    <footer>
+        <p>&copy;copyright 2012</p>
+    </footer>
+
+</div>
+
+<script>
+  $(".but").css("background-color","#666348");
+  $("#button").click(function(e){
+      alert("Hello1");
+      $('.but').hide();
+      e.stopImmediatePropagation();// блокировка последующих событий этого кс
+      $('.but').css("background-color", "#966").show(400,function(){
+         alert("озвратили див")
+      });
+
+      return false;
+  });
+</script>
+</body>
+</html>

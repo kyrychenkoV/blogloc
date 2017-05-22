@@ -1,0 +1,482 @@
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+</head>
+
+<body>
+<h1>Считаем кроликов</h1>
+
+
+<script type="text/javascript">
+    //console.log();
+  /*  var message='Петя'
+   function showMessage(){
+       var message='Привет, я - Вася!'
+       var mes=12;
+       console.log(message);
+   }
+   showMessage();
+    console.log(message);
+   // console.log(mes);
+    function showMessage1(from, text) { // параметры from, text
+
+        from = "** " + from + " **"; // здесь может быть сложный код оформления
+        text=text||'Text mot prer';
+        console.log(from + ': ' + text);
+        console.log(from='new');
+
+    }
+    showMessage1('Маша');
+    console.log(showMessage1());//ретурна нет поэтому ундефайнет*/
+////    showMessage1('Маша', 'Как дела?');
+//    console.log(showMessage1('fghfgh','sdfsf'));
+
+    //Функциональные выражения
+  /*  function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+    }
+    function showOk() {
+        alert( "Вы согласились." );
+    }
+
+    function showCancel() {
+        alert( "Вы отменили выполнение." );
+    }
+
+    // использование
+    ask("Вы согласны?", showOk, showCancel);*/
+//    var sum = new Function('a,b', 'if(a!=1) return a+b; else return b; ');
+//
+//    var result = sum(1, 2);
+//    alert( result ); // 3
+//
+//    var a=function arr(s){
+//        confirm((s),'Yes','No');
+//        if('Yes'){
+//            console.log('dsfdf');
+//        }
+//    }
+   /*summTo(100);
+   function summTo(n) {
+       var summ=0;
+       for (var i=0;i<n;i++){
+           summ+=n-i;
+           console.log(summ);
+       }
+       console.log(summ);
+   }*/
+
+    //Fields
+//    var a="sSvoystva";
+//    var b=12.4452
+//    console.log(a.length);
+//    console.log(a.charCodeAt(1));
+//    console.log(a.toUpperCase());
+//    console.log(b.toFixed(1));
+//
+//    var person={};
+//    person.name='Vasya';
+//    var key='name';
+//    console.log(person[key]);
+//    person.la=function (){
+//        return 'funct';
+//    }
+//
+//    if('la' in person){
+//        console.log('la est v person')
+//    }
+//
+
+//    var menu = {
+//        width: 300,
+//        height: 200,
+//        title: "Menu",
+//        Arr:function(){
+//         console.log('Function');
+//            return 'fff ';
+//        }
+//    };
+//
+//    for (var key in menu) {
+//        // этот код будет вызван для каждого свойства объекта
+//        // ..и выведет имя свойства и его значение
+//
+////        console.log( "Ключ: " + key + " значение: " + menu[key] );
+//    }
+//    console.log(menu.Arr()+'dfdfs');
+//    var obj={};
+//    console.log(isEmptyObj(obj));
+//    obj.name=2;
+//    console.log(isEmptyObj(obj));
+//
+//    function isEmptyObj(obj){
+//        var caunt=0;
+//        for (key in obj){
+//            caunt++;
+//        }
+//        if(caunt==0){
+//            return true;
+//        }
+//        else{
+//            return false;
+//        }
+//    }
+
+//    var salaries = {
+//        "Вася": 100,
+//        "Петя": 300,
+//        "Даша": 250
+//    };
+//    var summ=0;
+//    for(key in salaries ){
+//           summ += salaries[key]
+//    }
+//
+//    console.log(summ);
+//    console.log(sallary(salaries));
+//    function sallary(obj){
+//        var caunt=0;
+//        var max=0;
+//        for (key in obj){
+//            caunt++;
+//            if(max<obj[key]){
+//                max=obj[key];
+//                var name=key;            }
+//        }
+//        if(caunt==0){
+//            return 'Net sotrudnicow';
+//        }
+//        else{
+//
+//            return max+' '+name;
+//        }
+//    }
+//    var time = {
+//        year: 2345,
+//        month: 11,
+//        microsecond: 123456,
+//        day: 10,
+//        hour: 11,
+//        minute: 12,
+//        second: 13
+//
+//    }
+//
+//
+//    console.log(time); // (*)
+//    time.microsecond++; // (**)
+//
+//    console.log(time);
+//    time.microsecond++;
+//
+//    console.log(time);
+//    time.microsecond++;
+
+//    function makeCounter() {
+//        var currentCount = 1;
+//
+//        return function() {
+//            return currentCount++;
+//        };
+//    }
+//
+//       console.log(makeCounter()() );
+//    var value = 0;
+//
+//    function f() {
+//        if (1) {
+//            value = true;
+//        } else {
+//            var value = false;
+//        }
+
+//        alert( value );
+//    }
+//
+//    f();
+//    function caunters(){
+//        var caunter =1;
+//        return{
+//         getCount:function(){
+//            return   caunter++;
+//         },
+//          setobj:function(value){
+//             caunter=value;
+//          },
+//          reset:function(){
+//              caunter=1;
+//          }
+//         }
+//    }
+//    var obj=caunters();
+//    console.log(obj.setobj(5));
+//    console.log(obj.getCount());
+//    console.log(obj.getCount());
+//    function makeCounter() {
+//        var currentCount = 1;
+//
+//        // возвращаемся к функции
+//        function counter() {
+//            return currentCount++;
+//        }
+//
+//        // ...и добавляем ей методы!
+//        counter.set = function(value) {
+//            currentCount = value;
+//        };
+//
+//        counter.reset = function() {
+//            currentCount = 1;
+//        };
+//     return  counter;
+//    }
+//    var counter = makeCounter();
+//    console.log(counter());
+//    counter.set(5);
+//    alert( counter() )
+//    function sum(a){
+//        return function (b) {
+//            return a+b;
+//        }
+//    }
+//    console.log(sum(2)(3));
+//    function makeBuffer() {
+//        var buffer='';
+//        function buff(a){
+//            if(arguments.length==0){
+//                return buffer;
+//            }
+//            buffer+=' '+a;
+//            return buffer;
+//        }
+//            buff.clear=function(){
+//                buffer=''
+//            };
+//        return buff;
+//
+//    }
+//
+//    var buffer = makeBuffer();
+//
+//    // добавить значения к буферу
+//    buffer('Замыкания');
+//    buffer(' Использовать');
+//    buffer(' Нужно!');
+//
+//    // получить текущее значение
+//    alert( buffer() );
+//    buffer.clear();
+//    alert( buffer() );
+//
+//    var users = [{
+//        name: "Вася",
+//        surname: 'Иванов',
+//        age: 20
+//    }, {
+//        name: "Петя",
+//        surname: 'Чапаев',
+//        age: 25
+//    }, {
+//        name: "Маша",
+//        surname: 'Медведева',
+//        age: 18
+//    }];
+  /*  users.sort(function(a, b) {
+        return a.name > b.name ? 1 : -1;
+    });
+    console.log(users);
+    users.sort(function(a, b) {
+        return a.age > b.age ? 1 : -1;
+    });
+    console.log(users);*/
+//    function byField(field){
+//        if(field=='name'){
+//           return  function(a, b) {
+//                return a.name > b.name ? 1 : -1;
+//           }
+//        }
+//        else{
+//           return  function(a, b) {
+//                return a.age > b.age ? 1 : -1;
+//            };
+//           }
+//
+//
+//    };
+//    users.sort(byField('name'));
+//    users.forEach(function(user) {
+//        alert( user.name );
+//    }); // Вася, Маша, Петя
+//
+//    users.sort(byField('age'));
+//    users.forEach(function(user) {
+//        alert( user.age );
+//    });
+
+//    function filter(arr, func){
+//
+//    }
+//    var arr = [1, 2, 3, 4, 5, 6, 7];
+//    alert(filter(arr, function(a) {
+//        return a % 2 == 0
+//    }));
+//    alert( filter(arr, inBetween(3, 6)) ); // 3,4,5,6
+//
+//    alert( filter(arr, inArray([1, 2, 10])) ); // 1,2
+
+//    function func() {
+//       console.log( this ); // выведет [object Window] или [object global]
+//    }
+//
+//    func();
+//    function caunter(){
+//        var caunt=1;
+//            function lala(){
+//            caunt++;
+//        }
+//
+//    };
+//    var a=caunter();
+//    console.log(a())
+//    console.log(a())
+//    console.log(a())
+//    console.log(caunter()())
+
+//    caunt=5;
+//    function caunter(){
+//
+//        function s (){
+//             return s.caunter++;
+//        }
+//        s.caunter=1;
+//        console.log(s)
+//        return s;
+//
+//    };
+//    var a=caunter();
+//    console.log(a())
+//    console.log(a())
+//    console.log(a)
+//    a=caunter(30);
+//    console.log(a)
+//    console.log(a)
+//    console.log(a.reset);
+//    console.log(a)
+//    console.log(a)
+
+//    var arr = [1, 2, 3, 4, 5, 6, 7];
+//    function filter(arr,func){
+//        var array=[];
+//        for(var i=0;i<arr.length;i++){
+//            var val=arr[i];
+//            if(func(val)){
+//                array.push(val);
+//            }
+//        }
+//        return array;
+//    }
+//    alert(filter(arr, function(a) {
+//        return a % 2 == 0
+//    })); // 2,4,6
+//    function inBetween(a,b){
+//
+//
+//    };
+//    alert( filter(arr, inBetween(3, 6)) ); // 3,4,5,6
+//
+//    alert( filter(arr, inArray([1, 2, 10])) ); // 1,2
+//
+//    var vasya = {age:22};
+//    var petya = {age:42};
+//    vasya.friend = petya;
+//    petya.friend = vasya;
+//    petya=null;
+//    delete vasya.friend;
+//
+//
+//    console.log(vasya);
+
+
+
+//    vasya = petya = null;
+//
+//    function marry(man, woman) {
+//        woman.husband = man;
+//        man.wife = woman;
+//
+//        return {
+//            father: man,
+//            mother: woman
+//        }
+//    }
+//
+//    var family = marry({
+//        name: "Василий"
+//    }, {
+//        name: "Мария"
+//    });
+//    delete family.father;
+//    delete family.mother.husband;
+//    window.family=null;
+//    console.log(family)
+
+//
+//    var user = {
+//        name: 'Василий',
+//
+//        sayHi: function() {
+//            alert( this.name ); // приведёт к ошибке
+//        }
+//    };
+//
+//    var admin = user;
+//    user = null;
+//
+//    admin.sayHi();
+    function sayHi () {
+        var a=5;
+        sayHi.b=6;
+        return  sayHi
+    }
+var s=sayHi();
+    console.log(s.b);
+</script>
+
+<!--<script>-->
+
+    <!--function pow(x, n) {-->
+        <!--var result = 1;-->
+
+        <!--for (var i = 0; i < n; i++) {-->
+            <!--result *= x;-->
+        <!--}-->
+
+        <!--return result;-->
+    <!--}-->
+<!--</script>-->
+<!--<script src="test.js"></script>-->
+<!--<div id="mocha"></div>-->
+<!--<script>-->
+    <!--mocha.run();-->
+<!--</script>-->
+
+
+</body>
+</html>
