@@ -10,23 +10,14 @@ use App\DiscountType;
 use App\Http\Controllers\Session;
 
 
+
 class UpdateDatabaseReservation extends Controller
 {
     public $testErrors=array();
 
     public function updateDatabase(Request $request, $id)
     {
-//        $order = Reservation::where('guid', $id)->first();
-
-//        $codeDiscount = Discount::all()->where('identifier', $order->pr_code)->first();
-//        $codeDiscount->is_valid=0;
-//        $codeDiscount->save();
-
-
-
         $data = $request->all();
-
-
         $reservationModel = new Reservation();
         $isValid = $reservationModel->validate([$data]);
 
@@ -44,18 +35,13 @@ class UpdateDatabaseReservation extends Controller
             $discount = new Discount();
 
             if (array_key_exists('pr-code', $data)) {
-
                 $PrCode = Discount::all()->where('identifier', $data['pr-code'])->first();
-
                 if ($PrCode != null && $PrCode->one_time_only == 1 && ($PrCode->is_valid == 1 || session('promocode') == $data['pr-code'])) {
                     $reservation->price = Calculator::calculate($data);
-
                     $PrCode->is_valid = 0;
                     $PrCode->save();
                     $reservation->pr_code = $data['pr-code'];
-
                     if (session()->has('promocode') && (session('promocode') != $data['pr-code'])) {
-
                         $discount->statePromocode(session('promocode'), 1);
                     }
                 }
@@ -63,10 +49,9 @@ class UpdateDatabaseReservation extends Controller
                     return response()->json([
                         "isValid"  => 1,
                         "errors"   => [0=>"Промокод не дійсний помилка"],
-                            "redirect" => 'showguid',
+
                     ]);
                 }
-
             } else {
                 if (!empty(session('promocode'))) {
                     $reservation->price = Calculator::calculate($data);
@@ -82,14 +67,11 @@ class UpdateDatabaseReservation extends Controller
 
             return response()->json([
                 "isValid"  => 0,
-                "errors"   => $reservationModel->getErrorsMessages(),
-                "redirect" => 'showguid',
             ]);
         } else {
             return response()->json([
                 "isValid"  => 1,
                 "errors"   => $reservationModel->getErrorsMessages(),
-                "redirect" => 'showguid',
             ]);
 //            return redirect()->route('show.guid', ['guid' => $id])->withInput()->withErrors($reservationModel->getErrorsMessages());
         }

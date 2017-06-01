@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="{{ asset('/assets/css/reservation.css') }}"/>
 <script src="{{ asset('/assets/js/order.js') }}"></script>
 <script src="{{ asset('/assets/js/DataPickerUA.js') }}"></script>
+{{--<script src="{{ asset('/assets/js/editReservation.js') }}"></script>--}}
 <meta name="csrf_token" content="{{ csrf_token() }}" />
 
 
@@ -18,7 +19,7 @@
             </div>
             {{--@endif--}}
         <table id="reserv-table" datarows=1>
-{{--            <form id="second-form" method="POST" action="{{route('update.reservation',['guid'=>$arr['guid']]) }}">--}}
+            {{--<form id="second-form" method="POST" action="{{route('update.reservation',['guid'=>$arr['guid']]) }}">--}}
             <form id="second-form">
                 {{ csrf_field() }}
                 <tr>
@@ -79,27 +80,41 @@
                 </tr>
             </form>
         </table>
-        <div class="-1u 3u -2u(medium) 5u(medium) 12u(small) done-btn " style="float:right; margin-top:20px">
-            <input type="submit" name="OK" id="reserv-done-btn" value="Зберегти" form="second-form" >
-        </div>
-        <div class="-1u 3u -2u(medium) 5u(medium) 12u(small)" id="src" style="display: none; float:right; margin-top:20px">
-            <input type="submit" name="OdsdK" id="reserv-done-btn1"  value="Повернутись" form="second-form" >
+            <div class="-1u 3u -2u(medium) 5u(medium) 12u(small) done-btn edit-form" style="float:right; margin-top:20px">
+                <input type="button"  name="OhK" id="edit-done-btn" value="Редагувати"  >
+            </div>
+            <div class="-1u 3u -2u(medium) 5u(medium) 12u(small) done-btn save-form "  style="display: none;float:right; margin-top:20px">
+                <input type="submit" name="OK" id="reserv-done-btn" value="Зберегти" form="second-form" >
+            </div>
+            <div class="-1u 3u -2u(medium) 5u(medium) 12u(small)" id="src" style="display: none; float:right; margin-top:20px">
+                <input type="button"  name="OdsdK" id="reserv-done-btn1"  value="Повернутись"  >
+            </div>
+
+            <a class="btn btn-default" href="{{route('booking.save',['id'=>$arr['bookingfacts_id']]) }}"  role="button">Повернутись</a>
         </div>
 
     </div>
-
-</div>
 <script>
-$(document).ready(function(){
-    if($("#myselect").val()!=6){
-        $('.promo-code-input').prop("disabled", true);
-    }
+    $(document).ready(function(){
+        $(".hide-field").prop( "disabled", true ).css("background-color","white");
 
-    $("#reserv-done-btn").click(function () {
+        $("#edit-done-btn ").click(function () {
+            $(".edit-form").hide()
+            $(".hide-field").prop( "disabled", false )
+            $(".save-form ").show("slow");
+            if($("#myselect").val()!=6){
+                $('.promo-code-input').prop("disabled", true);
+            }
 
-        var id=$('.guid').html();
-        var x = $('form').serializeArray();
+            return false;
+        });
 
+
+
+        $("#reserv-done-btn").click(function () {
+
+            var id=$('.guid').html();
+            var x = $('form').serializeArray();
             $.ajax({
                 url: "/booking/update/"+id,
                 method: 'post',
@@ -111,7 +126,7 @@ $(document).ready(function(){
                 },
                 data: x,
                 success: function (result) {
-                       if(result.isValid){
+                    if(result.isValid){
 
                         for (var i=0;i<result.errors.length;i++) {
                             $(".alert-danger").show()
@@ -132,21 +147,24 @@ $(document).ready(function(){
             });
 
             return false;
+        });
+
     });
 
-});
-
-$("#reserv-done-btn1 ").click(function () {
+    $("#reserv-done-btn1 ").click(function () {
         history.back();
-               return false;
+        return false;
     });
-$("#myselect").change(function (){
-    if($("#myselect").val()==6){
-        $('.promo-code-input').prop("disabled", true);
-    }
-    else{
-        $('.promo-code-input').css("background","white").prop("disabled", false );
-    }
-});
+    $("#myselect").change(function (){
+        if($("#myselect").val()==6){
+            $('.promo-code-input').prop("disabled", true);
+        }
+        else{
+            $('.promo-code-input').css("background","white").prop("disabled", false );
+        }
+    });
+
+
 
 </script>
+
