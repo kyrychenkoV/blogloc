@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0095f416-2e90-48b5-8ee4-69379aad5426" name="Default" comment="add">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chat/Test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chat1/Test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/chat1/fonts/test.html" beforeDir="false" />
     </list>
     <ignored path="blog.loc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,27 +42,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AjaxController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="43" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-              <folding>
-                <element signature="e#38#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1887">
-              <caret line="120" column="25" selection-start-line="120" selection-start-column="12" selection-end-line="120" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/login.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
@@ -90,8 +71,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="68">
+              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/chat3/Test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/chat3/fonts/test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -107,7 +106,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/chat/Test.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -167,8 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/seeds/CompanyTableSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/views/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/register.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserRegistration.php" />
         <option value="$PROJECT_DIR$/resources/views/form.blade.php" />
@@ -217,6 +218,8 @@
         <option value="$PROJECT_DIR$/resources/views/login.blade.php" />
         <option value="$PROJECT_DIR$/public/oop/orderGet.blade.php" />
         <option value="$PROJECT_DIR$/tests/chat/fonts/test.html" />
+        <option value="$PROJECT_DIR$/tests/chat/Test.php" />
+        <option value="$PROJECT_DIR$/tests/chat3/Test.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -295,10 +298,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="738" />
+    <option name="width" value="1189" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -327,8 +329,13 @@
               <item name="blogloc" type="b2602c69:ProjectViewProjectNode" />
               <item name="blogloc" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="chat1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="blogloc" type="b2602c69:ProjectViewProjectNode" />
+              <item name="blogloc" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="chat3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -347,11 +354,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workProgramm\OSPanel\domains\blogloc\tests" />
       <recent name="C:\workProgramm\OSPanel\domains\blogloc" />
       <recent name="D:\xampp\htdocs\blog\public\oop" />
       <recent name="D:\xampp\htdocs\blog\public\jQuery\images" />
       <recent name="D:\xampp\htdocs\blog\public\src" />
-      <recent name="D:\xampp\htdocs\blog\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\blog\public\oop" />
@@ -512,7 +519,7 @@
       <workItem from="1495455987213" duration="1815000" />
       <workItem from="1496227853610" duration="1134000" />
       <workItem from="1496323165863" duration="60000" />
-      <workItem from="1605273163015" duration="644000" />
+      <workItem from="1605273163015" duration="2860000" />
     </task>
     <task id="LOCAL-00001" summary="dfsdfsd">
       <created>1487839286077</created>
@@ -703,11 +710,32 @@
       <option name="project" value="LOCAL" />
       <updated>1605273323782</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="add">
+      <created>1605273979814</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1605273979814</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add chat">
+      <created>1605274075859</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1605274075859</updated>
+    </task>
+    <task id="LOCAL-00030" summary="remove chat 3">
+      <created>1605274899357</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1605274899357</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359867000" />
+    <option name="totallyTimeSpent" value="362083000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -719,9 +747,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="738" y="0" width="1189" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28304905" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16740479" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -736,14 +765,14 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5042644" side_tool="true" weight="0.771645" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49573562" visible="true" weight="0.31744313" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49573562" visible="true" weight="0.32056892" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" weight="0.32939634" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.3290398" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.06609808" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.10983171" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -762,9 +791,11 @@
     <MESSAGE value="return dfdf" />
     <MESSAGE value="$_POST  don't' see image" />
     <MESSAGE value="contracts&#10;" />
-    <MESSAGE value="add" />
     <MESSAGE value="er" />
-    <option name="LAST_COMMIT_MESSAGE" value="er" />
+    <MESSAGE value="add" />
+    <MESSAGE value="add chat" />
+    <MESSAGE value="remove chat 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove chat 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -778,23 +809,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/xml/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/src/Xml/Document.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/xml/test1.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" selection-start-line="1" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/xml/test2.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1062,6 +1076,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/chat1/fonts/test.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/chat3/fonts/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/chat/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tests/chat/fonts/test.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1069,13 +1100,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/chat/Test.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/tests/chat3/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
